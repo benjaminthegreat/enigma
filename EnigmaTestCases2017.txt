@@ -1,0 +1,45 @@
+Enigma Test Cases:
+
+Test Case 1: One letter, neutral rotor positions
+Input: IV V III A A Z AH BD CL EI MZ NP QR SU VX WY F
+ABCEMNQSVW HDLIZPRUXY
+Output: B
+BNEHUDQNOGTDYQVKYICIT
+Test Case 2: One letter, multiple rotor shifts
+Input: I II III M Y D AB CD EF GH IJ KL MN OP QR ST K
+Output: J
+
+Test Case 3: Multiple words, multiple rotor shifts
+Input: II IV V S M X AH BD CL EI MZ NP QR SU VX WY HERES JOHNNY
+Output: OTEYU PVDYBW
+
+Test Case 4: Multiple words, multiple rotor shifts, notch position
+Input: I II III T Y T AK BS CZ EF GI HL JU MO PQ VY ET PHONE HOME
+Output: CC ENUAL KMND
+
+Test Case 5: Multiple words, multiple rotor shifts, double step
+Input: IV I V J P Y AG CJ DZ EM FK IN QT RX UV WY NOBODY PUTS BABY IN THE CORNER
+Output: GFKEPU OASH MWMB SV JJJ YPFWGG
+
+4 0 2 R O G CWOMTPUNJR ABDEKFGQIH COMPUTERBIZ
+
+1 0 4 L K P CGOWMPRUT AIBKDVJEF COMPUTERYOXEWHSFJGFCWGNXQ
+
+0 1 2 A A I CLOVPFUTE AKMJBRSTI COMPUTERTHETLLVURNXMMRHXKABSYJSLAXAKRTMTZZJ
+I II III A A I CA LK MO VJ PB FR SU TT EI
+0 1 2 A A P COEMLUBWS ITJPRAVZF COMPUTEREMZYZLBEXQMPTFJQGAFTVJSLARVZCQJABXH
+I II III A A P CI OT EJ MP LR UA BV WZ SF QQ KJKRVCZFIQDUDHSBCGIKVJQEMBUXWBGOBEKMQIXFODK
+
+
+
+String logic: 1387.4814814814815
+HashMap logic: 1315.1851851851852
+fresh optimizations: 1006
+Time one plugboard call takes: 130.11784511784512
+Total time spent in plugboard: 38645
+one enigma call is 0.005988971979144849
+time spent in enigma: 25534
+66% of plugboard time is enigma calls
+4263503 enigma calls
+can I cache these?
+probably not, but I will try to optimize them
