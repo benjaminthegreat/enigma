@@ -40,7 +40,7 @@ public class Enigma {
 	public static long timeMaster = 0;
 	public static long timeBoi = 0;
 	//file for putting
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws FileNotFoundException {
 		/*BIGEGG.add(ROTORMAPI);
 		BIGEGG.add(ROTORMAPII);
 		BIGEGG.add(ROTORMAPIII);
@@ -85,7 +85,8 @@ public class Enigma {
 					}
 					s.close();
 				} catch(Exception e) {
-					System.out.println("This program requires use of tail\nYour computer probably lacks this. Use MinGW or Linux");
+					System.out.println("The requested action requires use of tail\nYour computer probably lacks this. Use MinGW or Linux");
+					return;
 				}
 				child = new File(childe + "a.txt");
 				if(lastLine.length() > 0) {
