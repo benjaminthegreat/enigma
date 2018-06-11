@@ -28,8 +28,8 @@ public class Enigma {
 	public static final char TURNIV = 'J' + 1;
 	public static final char TURNV = 'A';
 	public static final char[] 	TURNS = {TURNI, TURNII, TURNIII, TURNIV, TURNV};
-	public static final String THINGTODECRYPT = "BNEHUDQNOGTDYQVKYICIT";
-	//public static final String THINGTODECRYPT = "KJKRVCZFIQDUDHSBCGIKVJQEMBUXWBGOBEKMQIXFODK";
+	//public static final String THINGTODECRYPT = "BNEHUDQNOGTDYQVKYICIT";
+	public static final String THINGTODECRYPT = "KJKRVCZFIQDUDHSBCGIKVJQEMBUXWBGOBEKMQIXFODK";
 	//reflector
 	public static final String REFLECTOR = "YRUHQSLDPXNGOKMIEBFZCWVJAT";
 	public static final HashMap<Character, Character> REFLECTORMAP = new HashMap<Character, Character>();
@@ -86,6 +86,7 @@ public class Enigma {
 					s.close();
 				} catch(Exception e) {
 					System.out.println("The requested action requires use of tail\nYour computer probably lacks this. Use MinGW or Linux");
+					inputGetter.close();
 					return;
 				}
 				child = new File(childe + "a.txt");
@@ -98,7 +99,8 @@ public class Enigma {
 			//long numbers = 0;
 			//long totalTime = 0;
 			boolean isValid = false;
-			for(int i = startDecrypt; i < THINGTODECRYPT.length() - "COMPUTER".length() && !isValid; i++) {
+			//System.out.println(THINGTODECRYPT.length() - "COMPUTER".length());
+			for(int i = startDecrypt; i <= THINGTODECRYPT.length() - "COMPUTER".length() && !isValid; i++) {
 				isValid = true;
 				for(int j = i; j < "COMPUTER".length() + i; j++) {
 					if(THINGTODECRYPT.charAt(j) == "COMPUTER".charAt(j - i)) {
