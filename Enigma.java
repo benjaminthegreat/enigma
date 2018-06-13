@@ -772,18 +772,18 @@ public class Enigma {
 		boyo.close();
 		//for loop
 		//first rotor
-		for(int i = ii; i < 5; i++) {
+		for(int i = 0; i < 5; i++) {
 			//second rotor
-			for(int j = ji; j < 5; j++) {
+			for(int j = 0; j < 5; j++) {
 				if(j == i) continue;
 				//third rotor
-				for(int k = ki; k < 5; k++) {
+				for(int k = 0; k < 5; k++) {
 					if(k == j || k == i) continue;
 					System.out.printf("%s %s %s\n", romans[i], romans[j], romans[k]);
 					//rotor settings
-					for(int l = li; l < 26; l++) {
-						for(int m = mi; m < 26; m++) {
-							for(int n = ni; n < 26; n++) {								//plugboard
+					for(int l = 0; l < 26; l++) {
+						for(int m = 0; m < 26; m++) {
+							for(int n = 0; n < 26; n++) {								//plugboard
 								//herd
 								//arraylist for wrong plugboard settings here
 								ArrayList<String> wrongs = new ArrayList<String>();
